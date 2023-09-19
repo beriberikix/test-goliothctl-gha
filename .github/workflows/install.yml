@@ -14,8 +14,8 @@ jobs:
       - name: Setup goliothctl
         uses: goliothlabs/setup-goliothctl@main
         with:
-          apiKey: ${{ secrets.apiKey }}
-          projectId: ${{ env.projectId }}
+          apiKey: ${{ secrets.APIKEY }}
+          projectId: ${{ vars.PROJECTID }}
 
       - name: List devices
         run: goliothctl device list

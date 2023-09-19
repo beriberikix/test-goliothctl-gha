@@ -13,3 +13,8 @@ jobs:
 
       - name: Setup goliothctl
         uses: goliothlabs/setup-goliothctl@main
+        with:
+          apiKey: ${{ secrets.apiKey }}
+
+      - name: List devices
+        run: goliothctl device list

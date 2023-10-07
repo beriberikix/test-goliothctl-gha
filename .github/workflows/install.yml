@@ -18,7 +18,7 @@ jobs:
           projectId: ${{ vars.PROJECTID }}
 
       - name: Create Device
-        uses: beriberikix/create-resources@main
+        uses: goliothlabs/create-device@main
         with:
           deviceName: foobarbaz
           deviceTag: ci

@@ -21,6 +21,7 @@ jobs:
         uses: beriberikix/create-resources@main
         with:
           deviceName: foobarbaz
+          deviceTag: ci
 
       - name: List devices
         run: goliothctl device list

@@ -23,5 +23,19 @@ jobs:
           deviceName: foobarbaz
           deviceTag: ci
 
+      - name: Download file for Artifact
+        id: dl-artifact
+        uses: robinraju/release-downloader@v1.8
+        with:
+          repository: golioth/thingy91-golioth
+          latest: true
+          fileName: app_update_thingy91_v1.0.0.bin
+
+      - name: Create Artifact
+        uses: goliothlabs/create-artifact@main
+        with:
+          file: ${{ fromJson(steps.dl-artifact.outputs.downloaded_files)[0] }}}}
+          version: 1.0.0
+
       - name: List devices
         run: goliothctl device list

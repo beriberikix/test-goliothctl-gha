@@ -17,5 +17,10 @@ jobs:
           apiKey: ${{ secrets.APIKEY }}
           projectId: ${{ vars.PROJECTID }}
 
+      - name: Create Device
+        uses: beriberikix/create-resources@main
+        with:
+          deviceName: foobarbaz
+
       - name: List devices
         run: goliothctl device list

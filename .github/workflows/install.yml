@@ -34,7 +34,7 @@ jobs:
       - name: Create Artifact
         uses: goliothlabs/create-artifact@main
         with:
-          file: ${{ fromJson(steps.dl-artifact.outputs.downloaded_files)[0] }}}}
+          file: ${{ fromJson(steps.dl-artifact.outputs.downloaded_files)[0] }}
           version: 1.0.0
 
       - name: List devices

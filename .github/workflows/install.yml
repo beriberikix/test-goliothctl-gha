@@ -43,5 +43,13 @@ jobs:
           version: 1.0.0
           deviceTag: ci
 
+      - name: Cleanup resources
+        uses: goliothlabs/cleanup-resources@main
+        with:
+          release: null
+          version: null
+          package: null
+          device: null
+          
       - name: List devices
         run: goliothctl device list
